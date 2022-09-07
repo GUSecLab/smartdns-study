@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Smart DNS Study</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-black.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+html,body,h1,h2,h3,h4,h5,h6 {font-family: "Roboto", sans-serif;}
+.w3-sidebar {
+  z-index: 3;
+  width: 250px;
+  top: 43px;
+  bottom: 0;
+  height: inherit;
+}
+</style>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-190224350-1">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-190224350-1');
+</script>
+
+<!--<script src="forwardparams.js" type="text/javascript"></script>-->
+<script src="https://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
+<script>
+function getParameterByName(name) {
+	name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+	var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+		results = regex.exec(location.search);
+	return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+}
+// Give the URL parameters variable names
+var source = getParameterByName('utm_source');
+var medium = getParameterByName('utm_medium');
+var campaign = getParameterByName('utm_campaign');
+ 
+// Set the cookies
+if(Cookies.get('utm_source') == null || Cookies.get('utm_source') == "") {
+Cookies.set('utm_source', source);
+}
+if(Cookies.get('utm_medium') == null || Cookies.get('utm_medium') == "") {
+Cookies.set('utm_medium', medium);
+}
+if(Cookies.get('utm_campaign') == null || Cookies.get('utm_campaign') == "") {
+Cookies.set('utm_campaign', campaign);
+}
+ 
+// Grab the cookie value and set the form field values
+$(document).ready(function(){
+	$('input[name=utm_source').val(Cookies.get('utm_source'));
+	$('input[name=utm_medium').val(Cookies.get('utm_medium'));
+	$('input[name=utm_campaign').val(Cookies.get('utm_campaign'));
+});
+
+</script>
+<!--<script src="https://cdn.jsdelivr.net/gh/gkogan/sup-save-url-parameters/sup.min.js"></script>-->
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar w3-theme w3-top w3-left-align w3-large">
+    <a class="w3-bar-item w3-button w3-right w3-hide-large w3-hover-white w3-large w3-theme-l1" href="javascript:void(0)" onclick="w3_open()"><i class="fa fa-bars"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-theme-l1">sdnsstudy.com</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small w3-hover-white">About the Study</a>
+    <a href="#participate" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Participate</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+    <img src="data/images/gw-gu-Grey.png" style="float:right; object-fit:contain; width:100%; max-width:432px; height:auto;">
+  </div>
+</div>
+
+<!-- Sidebar -->
+<nav class="w3-sidebar w3-bar-block w3-collapse w3-large w3-theme-l5 w3-animate-left" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-right w3-xlarge w3-padding-large w3-hover-black w3-hide-large" title="Close Menu">
+    <i class="fa fa-remove"></i>
+  </a>
+  <h4 class="w3-bar-item"><b>Menu</b></h4>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#">Home</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#about">About the Study</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#participate">Participate</a>
+  <a class="w3-bar-item w3-button w3-hover-black" href="#contact">Contact</a>
+  
+</nav>
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- Main content: shift it to the right by 250 pixels when the sidebar is visible -->
+<div class="w3-main" style="margin-left:250px">
+
+  <div class="w3-row w3-padding-top-64">
+    <div class="w3-twothird w3-container">
+      <h1 class="w3-text-teal">Smart DNS Study</h1>
+      <p>A study on how users understand and perceive 
+Smart DNS services.</p>
+      <form id="first-button" action="https://georgetown.az1.qualtrics.com/jfe/form/SV_2atQzyTFysqeLTT?Source=infoPage">
+              <input type="hidden" name="utm_source" value="">
+	      <input type="hidden" name="utm_medium" value="">
+	      <input type="hidden" name="utm_campaign" value="">
+	      <input type="submit" value="Take the Survey"/>
+      </form>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-top-24">
+    <div class="w3-twothird w3-container">
+      <h1 id="about" class="w3-text-teal">About the Study</h1>
+      <p>Researchers at Georgetown University and The George Washington University seek to
+      learn how users of Smart DNS services understand and interact with them.
+ Study participants will be asked to fill out an online questionnaire consisting of technical questions and questions about how they have (or plan to) set up and interact with Smart DNS services. We expect the survey to take about 15-20 minutes to complete.</p>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-24">
+    <div class="w3-twothird w3-container">
+      <h1 id="participate" class="w3-text-teal">Participate</h1>
+      <p>Thank you for your interest in participating in the study. Please review the <a href=#eligibility>eligibility criteria</a> to participate before continuing on to the questionnaire.</p>
+<p>Participants who complete the 15-20 minute survey will be eligible to win a $50 Amazon gift card for their participation in this study.
+</p>
+    </div>
+  </div>
+
+
+
+  <div class="w3-row w3-padding-24">
+    <div class="w3-twothird w3-container">
+      <h1 id="eligibility" class="w3-text-teal">Eligibility Criteria</h1>
+      <p>Participants must: </p>
+<p> 1. Be at least 18 years of age</p>
+
+<p> 2. Fall into one of the following categories:</p>
+<ul>
+<li>Participant has used a Smart DNS service in the past; or</li>
+<li>Currently uses a Smart DNS service; or</li>
+<li>Is seriously considering using a Smart DNS service within the next four weeks;</li>
+</ul>
+<p>If you meet the above criteria, you can access the survey by clicking the button below. </p>
+    <form id="second-button" action="https://georgetown.az1.qualtrics.com/jfe/form/SV_2atQzyTFysqeLTT?Source=infoPage">
+              <input type="hidden" name="utm_source" value="">
+              <input type="hidden" name="utm_medium" value="">
+              <input type="hidden" name="utm_campaign" value="">
+              <input type="submit" value="Take the Survey"/>
+      </form>
+    </div>
+  </div>
+
+  <div class="w3-row w3-padding-24">
+    <div class="w3-twothird w3-container">
+      <h1 id="contact" class="w3-text-teal">Contact Us</h1>
+      <p> This research principal investigator is Dr. Adam J. Aviv in the Computer Science Department at The George Washington University in collaboration with co-investigaor Dr. Micah Sherr at Georgetown University. If you have any questions or concerns you can email the researchers at smartdns@security.cs.georgetown.edu or call them at the phone numbers listed below.</p>
+      <ul>
+	      <li>Dr. Adam J. Aviv: +1-202-994-6569</li>
+	      <li>Dr. Micah Sherr: +1-202-687-4381</li>
+      </ul>
+      <p>This research has been reviewed according to the GWU’s procedures and Georgetown's procedures governing your participation in this research. </p>
+      <ul>
+	      <li>GWU IRB Approval NCR202561</li>
+	      <li>Georgetown IRB Approval STUDY00002643</li>
+      </ul>
+      <p>If you have any questions about your rights as a research participant you can contact the Office of Human Research of George Washington University, at telephone number +1-202-994-2715, or the Georgetown Office of Research Oversight/Regualtory affairs at +1-202-687-1506.</p>
+    </div>
+  </div>
+  
+
+  <!-- Pagination 
+  <div class="w3-center w3-padding-32">
+    <div class="w3-bar">
+      <a class="w3-button w3-black" href="#">1</a>
+      <a class="w3-button w3-hover-black" href="#">2</a>
+      <a class="w3-button w3-hover-black" href="#">3</a>
+      <a class="w3-button w3-hover-black" href="#">4</a>
+      <a class="w3-button w3-hover-black" href="#">5</a>
+      <a class="w3-button w3-hover-black" href="#">»</a>
+    </div>
+  </div>-->
+
+  <footer id="myFooter">
+    <div class="w3-container w3-theme-l5 w3-padding-32">
+     <img src="/data/images/gw-gu-Grey.png" height="43" style="object-fit:contain;"> 
+    </div>
+
+    <div class="w3-container w3-theme-l1">
+      <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
+    </div>
+  </footer>
+
+<!-- END MAIN -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+
+</body>
+</html>
+
