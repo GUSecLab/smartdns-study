@@ -5,8 +5,11 @@ This repository contains supplemental material to enable replication of our stud
 * Both versions of the survey as QSF-files
 * Analysis script(s) used for quantitative analysis
 * Codebooks used for qualitative analysis
-* scripts for computing IRR and a breakdown of calculated IRR by round
+* scripts for computing IRR and a breakdown of calculated IRR by round and IRR results
 
+## Repository Structure:
+* html: (html, js) source files and scripts used to run the study recruitment page. 
+*  
 
 
 
