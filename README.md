@@ -27,3 +27,8 @@ Though we did not include it in the QSF files, the original surveys contained a 
 (Per the conditions of our IRB approval and to protect participant privacy, we only stored records of the DNS resolution requests in our server logs.)  
 We then compared the DNS resolver IP addresses to a set of known SDNS resolvers to try and determine whether participants had configured SDNS to run on their computers and forgotten to disable it. 
 However, since our results were inconclusive, we ultimately decided not to report them in our paper and have omitted them from our artifacts. 
+
+## Reference Paper:
+Rahel A. Fainchtein, Adam J. Aviv, and Micah Sherr. 
+User Perceptions of the Privacy and Usability of Smart DNS.
+_The 2022 Annual Computer Security Applications Conference (ACSAC 2022)_.
