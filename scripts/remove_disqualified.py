@@ -5,6 +5,10 @@
 # vim: set fileencoding=utf8 :
 
 
+# Written by Rahel A. Fainchtein (raf3272[at]georgetown.edu)
+#
+#
+
 import pandas as pd, numpy as np
 from os import getcwd as os_getcwd
 

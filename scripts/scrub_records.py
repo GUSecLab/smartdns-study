@@ -1,11 +1,12 @@
 #!/usr/bin/env python
-    oficPrescreen = pd.read_csv('data/SDNS-ProlificPrescreen_12July21.csv')         default='data/')
 # coding=utf8
 # -*- coding: utf8 -*-
 
 # vim: set fileencoding=utf8 :
 
 
+
+# Written by Rahel A. Fainchtein (raf3272[at]georgetown.edu)
 
 import json
 import errno
@@ -118,20 +119,6 @@ def analyze_other_offerings(otherServices,mapDict):
             countsByNumUsed, usePrevalence
             )
     return ret
-
-
-
-# Removal of disqualified responses from Prolific participants.
-def remove_disqualified_responses(prolificPrescreen, proMainQuant):
-    toKeep = prolificPrescreen['Q2.6']!='I have never had nor used a SmartDNS account'
-    qualifies = prolificPrescreen['Q2.3'].apply(lambda x: x=='Yes')
-    prolificPrescreen = prolificPrescreen[['PROLIFIC_PID','random_id','Q2.1','Q2.2','Q2.3','Q2.4','Q2.6','Q9','Q9_15_TEXT','Q3.1','Q3.2','Q3.3','Q13.1','Q13.2','Q13.3','Q13.4','Q13.5','Q13.5_4_TEXT','Q13.6']].where(qualifies & toKeep)
-    matchRestriction = prolificPrescreen['PROLIFIC_PID'].apply(lambda x: x in set(proMainQuant['PROLIFIC_PID']))
-    prolificPrescreen = prolificPrescreen.where(matchRestriction)
-    matchRestriction = proMainQuant['PROLIFIC_PID'].apply(lambda x: x in set(prolificPrescreen['PROLIFIC_PID']))
-    proMainQuant = proMainQuant.where(matchRestriction)
-    return (prolificPrescreen, proMainQuant)
-
 
 
 def parse_inputs():
