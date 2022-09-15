@@ -152,6 +152,7 @@ def main():
     
     #remove responses where participants used a provider that has never offered SDNS, and does not currently offer it.
     prolificMerged = prolificMerged['Q9_15_TEXT'].apply(lambda x: x not in ['KutoVpn','OperaVPN','protonvpn','Mullvad'])
+    prolificMerged.drop(columns=['PROLIFIC_PID'],inplace=True)
     prolificMerged.to_csv(path_or_buf=params.outfile)
 
 
