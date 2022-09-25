@@ -74,5 +74,21 @@ Codes were mapped to knowledge level with the following groupings. Descriptions 
         
 ### Validating Categorization within the Sample:
 
+![Self indicated vs. Assessed Knowledge of DNS](figures/S8-S9_DnsKnowledge.png)
 
-        
+
+Spearman Rank between S8 and S9-derrived categories was then computed using [dns_knowledgeSpearman.py](../../scripts/dns_knowledgeSpearman.py):
+
+ rho = 0.5404869054627112, 
+ pval = 1.1892824544280393e-05
+
+
+## Qualitatively Checking for Potential Correlation
+
+![M1 SDNS improves Security v. S9-derrived knowledge levels](figures/M1-improvesSecVDns-S9.png)
+    
+![M2 SDNS improves Privacy v. S9-derrived knowledge levels](figures/M2-S9-Alluvium.png)
+
+![M3 SDNS is risk to Sec & Priv. v. S9-derrived knowledge levels](figures/M3-SecPrivRisk-S9-Knowledge_Alluvium.png)
+
+(See Appendix C in the paper for a mapping between participant impression of SDNS provider trustworthiness () and assessed DNS knowledge level.)
