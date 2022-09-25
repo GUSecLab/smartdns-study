@@ -5,6 +5,15 @@ This document provides an in-depth description of our procedure for doing so.
 
 Since questions _S7_ and _S8_ were both Likert resposes, we include their distributions below:
 
+### Users' Estimated Familiarity with and Knowledge of DNS
+
+As a starting point we asked participants whether they were familiar with DNS (S7), and whether they knew how DNS works (S8).
+The breakdown of participants' responses are given in the two graphs below. 
+
+![S7 Familiarity with DNS](figures/dns_familiarity.png)
+      *Fig. 1: Participants' Familiarity with DNS (S7)*
+      
+ 
 
 ### Description of Codes:
 
